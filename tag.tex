@@ -1,0 +1,20 @@
+% --- Tagging setup (after \documentclass and after \input{packages}) ---
+\usepackage{tagpdf}
+% Basic tagpdf settings; remove nonstandard-classes if your tagpdf version complains
+\tagpdfsetup{activate-all,uncompress,interwordspace=true}
+
+% --- Helper macros to mark semantic roles succinctly ---
+% Usage: \T{Your Name}, \HOne{Education}, \HTwo{Subheading}, \Ppara{A paragraph.}
+\newcommand{\T}[1]{%
+  \tagstructbegin{tag=T}\tagmcbegin{tag=T}#1\tagmcend\tagstructend%
+}
+\newcommand{\HOne}[1]{%
+  \tagstructbegin{tag=H1}\tagmcbegin{tag=H1}#1\tagmcend\tagstructend%
+}
+\newcommand{\HTwo}[1]{%
+  \tagstructbegin{tag=H2}\tagmcbegin{tag=H2}#1\tagmcend\tagstructend%
+}
+\newcommand{\Ppara}[1]{%
+  \tagstructbegin{tag=P}\tagmcbegin{tag=P}#1\tagmcend\tagstructend%
+}
+% ----------------------------------------------------

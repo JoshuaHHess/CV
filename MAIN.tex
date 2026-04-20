@@ -1,0 +1,252 @@
+% ---------- Put these lines BEFORE \documentclass ----------
+\DocumentMetadata{
+  lang = en-US,
+  pdfstandard = ua-2,   % optional: request PDF/UA-2
+  tagging = on
+}
+\documentclass{resume}
+% -----------------------------------------------------------
+
+
+\input{packages}
+\input{sections/myinfo}
+% Load tagpdf and configure it after \documentclass
+\usepackage{tagpdf}
+% Configure tagpdf here (this is where nonstandard-classes belongs)
+\tagpdfsetup{activate-all,uncompress,interwordspace=true}
+\begin{document}
+	
+%===== EDUCATION SECTION =====
+\vspace{-2mm}
+\input{sections/education}
+
+
+%===== Academic Positions =====
+\input{sections/positions}
+
+%===== RESEARCH INTEREST SECTION =====
+\vspace{-2mm}
+\begin{rSection}{Research Interests}
+public policy; cannabis policy; higher education
+\end{rSection}
+
+
+%===== TEACHING INTEREST SECTION =====
+
+\begin{rSection}{Teaching}
+Introduction to Economics, Principles of Microeconomics, Intermediate Microeconomics, Intermediate Macroeconomics, Introduction to Mathematical Economics, Environmental Economics, Quantitative Methods for Economists, Economic Theory with Games 
+
+\end{rSection}
+
+
+%===== PAPERS =====
+\begin{rSection}{PUBLICATIONS} 
+\small
+% {Budding Enrollment: The Impact of Cannabis Policy on US Colleges and Universities  (with Danna Thomas)} \textit{Forthcoming at Contemporary Economic Policy }
+\nocite{*}
+\renewcommand{\bibsection}{}
+
+\bibliography{sections/pubs}
+\end{rSection}
+
+%==== WORKING PAPERS ====
+\begin{rSection}{WORKING PAPERS} 
+
+{If you build it, they will learn: the effect of construction spending on construction trades graduates} (with Dylan Burke and John Killingsworth) at \textit{International Journal of Construction Education and Research} 
+
+{The impact of retail cannabis on STEM degrees} 
+
+{Hold my beer! the effects of alcohol on risk preferences in a college bar} (with Bentley Coffey and Elizabeth Watson) %at \textit{Southern Economic Journal}
+
+{Risky business: the effect of liberalized cannabis policy on risky teen sexual behavior} (with Roy Choudhurry) %at \textit{Economic Inquiry}
+
+\hspace{-2ex}\textbf{In Progress}\\
+{The ignored economic benefits of large construction projects: measuring spatial and temporal spillovers} (with Zachary Schaller and Russell Ormiston)
+
+{The impact of Dobbs v. Jackson on law school applications and enrollment} (with John Gordanier)
+
+% {If You Build It, They Will Learn: The Effect of Construction Spending on Construction Trades Graduates} (with Dylan Burke and John Killingsworth) at \textit{International Journal of Construction Education and Research} 
+
+
+% {The impact of retail cannabis on STEMs (and) degrees} 
+
+% {Hold My Beer!  The Effects of Alcohol on Risk Preferences in a College Bar (with Bentley Coffey and Elizabeth Watson)} %at \textit{Southern Economic Journal}
+
+% {Risky Business: the effect of liberalized cannabis policy on risky teen sexual behavior (with Roy Choudhurry) } %at \textit{Economic Inquiry}
+
+
+
+% \hspace{-2ex}\textbf{In Progress}\\
+% {The ignored economic benefits of large construction projects: measuring spatial and temporal spillovers (with Zachary Schaller and Russell Ormiston)}
+
+% {The impact of Dobbs v. Jackson on law school applications and enrollment (with John Gordanier)}
+
+
+\end{rSection}
+
+% %===== UNPUBLISHED MANUSCRIPTS ====
+% \begin{rSection}{UNPUBLISHED MANUSCRIPTS} 
+
+% { The Child Tax Credit and Demand for Recreational Marijuana  (with Jason DeBacker)}\\
+
+
+% \end{rSection}
+%
+%%%----------------------------------------------------------------------------------------
+%%%	PROFESSIONAL ORGANIZATIONS SECTION
+%%%----------------------------------------------------------------------------------------
+%
+%\begin{rSection}{Professional Organizations}
+%	American Economic Association\\
+%		Southern Economic Association\\
+%	Association of Environmental and Resource Economists
+%
+%	
+	
+%\end{rSection}
+%%----------------------------------------------------------------------------------------
+%%	SERVICE SECTION
+%%----------------------------------------------------------------------------------------
+\begin{rSection}{Service}
+\hspace{-2ex}\textbf{Academic}\\
+Associate Editor of \textit{Tourism Management Perspectives}\\
+10th Annual National Cannabis Research Conference Planning Committee 
+
+\hspace{-2ex}\textbf{University}\\
+Faculty Senate\\
+Director DMSB  Center of Economic Excellence\\
+Carolina Judicial Council\\
+Academic Advisor for \( A E \Pi \)\\
+High School Econ Day Planning Committee
+
+
+	
+
+	
+\end{rSection}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS AND HONORS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{AWARDS AND HONORS} 
+Professional Track Faculty Award for Outstanding Research
+  \hfill 2024\\
+	The Moore School Research Grant Program Recipient \hfill 2022\\
+	The Moore School Research Grant Program Recipient \hfill 2021\\
+	The Moore School Research Grant Program Recipient \hfill 2019\\	
+The Moore School Research Grant Program Recipient \hfill 2018\\	
+Outstanding Graduate Teaching Nominee (Dept. of Economics) \hfill 2017\\	
+Outstanding Graduate Research Award (Dept. of Economics) \hfill 2016\\
+Chapman Graduate Workshop in Experimental Economics \hfill 2015\\
+ % Departmental Research Assistantship Award \hfill 2014\\
+ % Front Range Community College Master Teacher Nominee\hfill 2011
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PRESENTATIONS} 
+\textbf{Rocky Mountain high(er) education: Colorado college students and cannabis sales}\\
+Southern Economic Association 95th Annual Meeting\\
+	Tampa FL \hfill 2025 \\
+    
+\textbf{Budding enrollment: the impact of cannabis policy on college freshmen}\\
+Western Economic Association International 99th Annual Meeting\\
+	Seattle WA \hfill 2024 \\
+
+ 
+\textbf{The Impact of Dobbs v. Jackson on Medical School Applications}\\
+Southern Economic Association 93rd Annual Meeting\\
+	New Orleans LA \hfill 2023 \\
+
+% \textbf{The Child Tax Credit and Demand for Recreational Marijuana}\\
+% Western Economic Association 98nd Annual Meeting\\
+% 	San Diego CA \hfill 2023 \\
+    
+% 		\textbf{The Effects of College Students and the Ski Industry on Colorado's Marijuana Sales}\\
+% Southern Economic Association 92nd Annual Meeting\\
+% 	Ft. Lauderdale FL\hfill 2022 \\
+
+% 		\textbf{The Whole Fracking Story}\\
+% Oxford College of Emory University Lyceum Lecture Series\\
+% Oxford GA\hfill 2019 \\	
+	
+% 		\textbf{An Investment-timing Approach to Local Fracking Policy}\\
+% Southern Economic Association 87th Annual Meeting\\
+% 	Tampa FL\hfill 2017 \\
+	
+\end{rSection}
+%===== SKILLS =====
+\begin{rSection}{Skills}
+ \begin{minipage}[t]{.5\textwidth}
+
+     \emph{ \large Coding Languages}
+
+      \vspace{1ex}
+     \begin{itemize}
+         \item Matlab - expert
+         \item \textit{R} - experienced
+         \item LaTex - experienced
+         
+          \end{itemize}
+
+ \end{minipage}\hfil
+  \begin{minipage}[t]{.5\textwidth}
+
+     \emph{\large Data Sets}
+
+      \vspace{1ex}
+     \begin{itemize}
+         \item IPEDS - expert
+         \item YRBS - expert
+         \item QCEW - experienced
+         \item Census - proficient
+         
+         
+          \end{itemize}
+
+ \end{minipage}
+\end{rSection}
+
+%
+%%----------------------------------------------------------------------------------------
+%%	REFERENCES
+%%----------------------------------------------------------------------------------------
+%\begin{rSection}{REFERENCES} 
+%	
+%	\vspace{3mm}
+%	
+%	\begin{tabular}{ l l  }
+%		%\underline{Research}& \underline{Research}\\
+%		Terrence Iverson & Stephan Weiler \\
+%		Department of Economics& Department of Economics\\
+%		Colorado State University &Colorado State University \\
+%		970-491-6079& 970-491-5538 \\
+%		\href{mailto:terry.iverson@colostate.edu}{terry.iverson@colostate.edu}&\href{mailto:stephan.weiler@colostate.edu}{stephan.weiler@colostate.edu} \\
+%		& \\
+%		& \\
+%		%\underline{Research}		&\underline{Teaching} \\
+%		Dale Manning                & Mike Smith\\
+%		Department of Agricultural  & Natural Sciences Department  \\
+%		and Resource Economics      & Front Range Community College\\
+%		Colorado State University   & 970-204-8134\\
+%		970-491-5706                &  \href{mail to: mike.smith@frontrange.edu}{mike.smith@frontrange.edu}\\
+%		\href{mail to: dale.manning@colostate.edu}{dale.manning@colostate.edu}  &\\
+%		
+%		
+%	\end{tabular}
+%	
+%
+%	
+%
+%\end{rSection}
+
+
+\end{document}
