@@ -1,8 +1,17 @@
-name: Build CV
+name: Build and Deploy CV
 
 on:
   push:
     branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -17,8 +26,38 @@ jobs:
           root_file: main.tex
           latexmk_use_lualatex: true
 
-      - name: Upload PDF
-        uses: actions/upload-artifact@v4
+      - name: Prepare site
+        run: |
+          mkdir -p public
+          cp main.pdf public/cv.pdf
+          cat > public/index.html <<'EOF'
+          <!doctype html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <title>CV</title>
+            </head>
+            <body style="margin:0;padding:0;">
+              <p style="padding:16px;font-family:system-ui;">
+                <a href="cv.pdf">Download CV PDF</a>
+              </p>
+              <iframe src="cv.pdf" style="width:100vw;height:100vh;border:0;"></iframe>
+            </body>
+          </html>
+          EOF
+
+      - uses: actions/upload-pages-artifact@v4
         with:
-          name: cv
-          path: main.pdf
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
